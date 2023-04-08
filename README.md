@@ -1,22 +1,25 @@
-# Phonebook API
+# Bloglist frontend
 
-In this exercise, we implemented a fullstack phonebook app with a backend written in Node.js and a frontend in react.js. The data are saved in a mongodb database and the app is deployed on heroku at the folowing URL.
+In this exercise, we will now create a frontend for the bloglist backend we created in the last part.
+A login functionnality is also implemented for restricting the possibility to view and create blogs only by authenticated users. We assume that a user already exists with the good credentials.
 
-* https://peaceful-depths-89341.herokuapp.com/
+Since the objective of this part is to test the react app, unit tests and end-to-end (E2E) tests with cypress are also implemented.
 
 ## Start the application locally
 
 To start an application:
 
 ```bash
+# First, you need to start the backend, to do so, head to the part4. Everything is explained in the README
+
 # Install dependancies
 $ npm install
 
-# create a .env file and put there the MONGODB_URI for connecting to your mongodb database
-$ echo "MONGODB_URI=<YOUR-MONGODB-URI>" > .env
+# Start the frontend application
+$ npm start
 
-# Start the application
-$ npm run dev
+# For running E2E tests
+$ npm run cypress:open        # Then, click on run all specs
 ```
 
-You can then access the app on : http://localhost:3001/
+You can then access the app on : http://localhost:3000/
