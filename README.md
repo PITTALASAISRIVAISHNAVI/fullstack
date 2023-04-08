@@ -1,11 +1,10 @@
-# Unicafe
+# Phonebook
 
-This web application collects customer feedback. There are only three options for feedback: good, neutral, and bad.
+In this exercise, we created a simple phonebook.
 
-While collecting feedbacks, the following statistics are displayed:
-* Total number of colllected feedbacks
-* The average score (good: 1, neutral: 0, bad: -1)
-* The percentage of positive feedback
+In this phonebook, users have the possibility to a add, update & delete a person as well as its phone number. Person's names are unique, which means that users cannot add names that already exist in the phonebook. A search field is also available in the app to filter the people by their name.
+
+This initial state of the application is stored in a file `db.json`, which correspond to a list of users along with their numbers. This file is used by the tool `JSON Server` that acts as a backend server where the data are stored.
 
 ## Start the application
 
@@ -14,8 +13,12 @@ To start an application, do the following :
 ```bash
 # Install dependancies
 $ yarn install
-# Start the application
+# Start the JSON Server
+$ npx json-server --port 3001 --watch db.json
+# On another terminal, start the application
 $ yarn start
 ```
 
-You can then access the app on : [http://localhost:3000/](http://localhost:3000/)
+You can then access the app on : http://localhost:3000/
+
+You can also see the content of the JSON Server by heading to http://localhost:3001/persons
